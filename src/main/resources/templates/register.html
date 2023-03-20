@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Rejestracja</title>
+</head>
+<body>
+<h1>Witaj nowy kliencie!</h1>
+<form action="/create-user" method="post">
+  <label>Podaj e-mail:</label>
+  <input type="email" th:field="${request.mail}">
+  <br>
+  <label>Podaj hasło</label>
+  <input type="password" th:field="${request.password1}">
+  <br>
+  <label>Jeszcze raz hasło</label>
+  <input type="password" th:field="${request.password2}">
+
+  <button type="submit">Idę na zakupy</button>
+</form>
+</body>
+</html>
